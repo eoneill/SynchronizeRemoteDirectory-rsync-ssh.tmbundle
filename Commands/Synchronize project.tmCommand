@@ -14,6 +14,10 @@ source "$TM_SUPPORT_PATH/lib/bash_init.sh" # might not be necessary
         echo "&lt;h3&gt;$REMOTE_USER@$REMOTE_HOST:$REMOTE_PATH&lt;/h3&gt;"
         echo "&lt;pre&gt;"
         cd "$TM_PROJECT_DIRECTORY"
+        # if a local user is set, piggy back on their SSH_AUTH_SOCK
+        if [[ -n "$LOCAL_USER" ]]; then
+            export "SSH_AUTH_SOCK=$(find /tmp/launch-*/Listeners -user "$LOCAL_USER" -type s | head -1 )"
+        fi
         RSYNC_CMD="rsync -v -zar --exclude=.tm_sync.config $RSYNC_OPTIONS"
         echo $RSYNC_CMD
         echo

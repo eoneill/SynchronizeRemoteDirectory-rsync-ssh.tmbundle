@@ -8,6 +8,9 @@ REMOTE_PORT="22"
 REMOTE_USER="username"
 REMOTE_PATH="/remote/directory"
 
+# if your ssh public key has a passphrase on it, a local user must be specified
+#LOCAL_USER="$REMOTE_USER"
+
 # Here you can parse options on to rsync if you e.g. want to exclude files
 RSYNC_OPTIONS="--exclude=.git --exclude=blib --exclude=_build --exclude=Makefile --exclude=Build --delete"
 
