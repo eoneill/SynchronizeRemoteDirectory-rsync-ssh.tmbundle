@@ -10,6 +10,7 @@ source "$TM_SUPPORT_PATH/lib/bash_init.sh" # might not be necessary
         . "$TM_BUNDLE_SUPPORT/bin/environment.sh"
         . "$TM_BUNDLE_SUPPORT/bin/test_for_project.sh"
         . "$TM_BUNDLE_SUPPORT/bin/load_config.sh"
+        echo "&lt;style type='text/css'&gt;body { font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; color: #333; }&lt;/style&gt;"
         echo "&lt;h1&gt;Synchronize project&lt;/h1&gt;"
         echo "&lt;h3&gt;$REMOTE_USER@$REMOTE_HOST:$REMOTE_PATH&lt;/h3&gt;"
         echo "&lt;pre&gt;"
@@ -43,7 +44,7 @@ source "$TM_SUPPORT_PATH/lib/bash_init.sh" # might not be necessary
 	<key>input</key>
 	<string>none</string>
 	<key>keyEquivalent</key>
-	<string>$@</string>
+	<string>~@R</string>
 	<key>name</key>
 	<string>Synchronize project</string>
 	<key>output</key>
